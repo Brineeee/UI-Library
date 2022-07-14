@@ -1,0 +1,41 @@
+_G.Color = Color3.fromRGB(255, 105, 138) -- TextColor
+_G.Color2 = Color3.fromRGB(23, 0, 1) -- DarkContrast
+_G.Color3 = Color3.fromRGB(44, 13, 19) -- LightContrast
+_G.Color4 = Color3.fromRGB(23, 0, 1) -- Accent
+_G.Color5 = Color3.fromRGB(255, 95, 95) -- Glow
+_G.Color6 = Color3.fromRGB(23, 0, 15) -- Background
+local Venyx = loadstring(game:HttpGet("https://raw.githubusercontent.com/Brineeee/UI-Library/main/Venyx-New"))()
+
+local Win = Venyx:AddWindow("Jioa Hub | Pet Simulator X", 0)
+
+local Tab1Section = Win:AddTab("Example", 8825005073)
+local Tab1 = Tab1Section:AddSection("-- Example Section --")
+
+--// Button \\--
+--you can use this button for destroying ui or if click will print
+
+Tab1:Button("Destroy Menu", function()
+   Venyx:DestroyMe() 
+end)
+
+--// Dropdown \\--
+--this dropdown also have textbox so if you press on the middle of dropdown your keyboard will show. 
+
+Tab1:Dropdown("Click Some Option to Print!", {"Option 1", "Option 2", "Option 3"}, function(v) 
+   print(v) 
+end) 
+
+--// Toggle \\--
+--remember always add the false on function so ui won't cause any problems. 
+
+Tab1:Toggle("Spam Warn", false, function(Vals)
+
+end) 
+
+--// Slider \\--
+--not for mobile! you can use slider for speed or jump or anything else you want to set with. 
+-- 1 = Limit || 16 = Max || 7 = Start
+
+Tab1:Slider("Slide Me for Speed", 1, 16, 7, function(Vals)
+
+end)
