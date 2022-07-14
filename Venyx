@@ -1,5 +1,7 @@
+-- https
+
 --[[
-local Venyx
+local Venyx = loadstring(game:HttpGet(" put link here "))()
 local GameName = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name
 _G.Color = Color3.fromRGB(120,255,0)
 local Win = Venyx:AddWindow("Yenx | ".. GameName, 0)
