@@ -1,0 +1,32 @@
+local Kavo = loadstring(game:HttpGet(('https://raw.githubusercontent.com/Brineeee/UI-Library/main/Kavo-New')))()
+local Window = Kavo.CreateLib("Tutorial", "Gold")
+
+local Tab1 = Window:NewTab("Example")
+local Tab1Section = Tab1:NewSection("This Is An Example")
+
+Tab1Section:NewButton("Inf Jumps", "Enables Inf Jumps", function()
+    local InfiniteJumpEnabled = true
+game:GetService("UserInputService").JumpRequest:connect(function()
+	if InfiniteJumpEnabled then
+		game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
+	end
+end)
+end)
+
+Tab1Section:NewToggle("Fov", "Changes Fov", function(state)
+    if state then
+        game.Workspace.CurrentCamera.FieldOfView = 120
+    else
+        game.Workspace.CurrentCamera.FieldOfView = 80
+    end
+end)
+
+Tab1Section:NewSlider("Speed", "Sussy Speed", 250, 120, function(v)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v
+end)
+Tab1Section:NewDropdown("Dropdown", "Dropdown with speed", {250, 120}, function(v)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v
+end)
+Tab1Section:NewColorPicker("Color Picker", "Color.Picker", Color3.fromRGB(0,255,255), function(v)
+
+end)
