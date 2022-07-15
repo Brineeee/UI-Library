@@ -1,0 +1,38 @@
+local Library = loadstring(game:HttpGet(('https://raw.githubusercontent.com/Brineeee/UI-Library/main/Flux-New')))()
+
+local win = Flux:Window("xSupFC", "Pet Simulator X", Enum.KeyCode.K)
+local tab = win:Tab("Tab 1", "http://www.roblox.com/asset/?id=6023426915")
+local tab2 = win:Tab("Tab 2", "http://www.roblox.com/asset/?id=6022668888")  
+
+-- tab
+tab:Button("Show Notify", "", function()
+Flux:Notification("10/10 Notification!", "Okay")
+end)
+
+tab:Label("Example Label")
+tab:Line()
+
+tab:Toggle("Print Value", "", function(t)
+print(t)
+end)
+
+tab:Slider("Print Slider Value", "", 1, 100,30,function(t)
+print(t)
+end)
+
+tab:Dropdown("Print Options", {"Torso","Head","Pants"}, function(t)
+print(t)
+end)
+
+-- tab2
+tab2:Colorpicker("Print Color Value", Color3.fromRGB(255,1,1), function(t)
+print(t)
+end)
+
+tab2:Textbox("Type Any text to print", "", true, function(t)
+print(t)
+end)
+
+tab2:Bind("Warn Bind", Enum.KeyCode.Q, function(c)
+warn(c) 
+end) 
